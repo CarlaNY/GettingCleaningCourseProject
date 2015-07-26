@@ -1,12 +1,16 @@
 # CodeBook.md
 #The below are the field names and sources of the tidy data
 
-FieldName	Source  
-Subject	identifier for the Subject  
-ActivityID	Activity engaged in  
-tBodyAcc.mean...X	mean of original data column  
-tBodyAcc.mean...Y	mean of original data column  
-tBodyAcc.mean...Z	mean of original data column  
+FieldName |	Source
+-----------------------------
+Subject	| identifier for the Subject  
+ActivityID |	Activity engaged in  
+tBodyAcc.mean...X	
+mean of original data column  
+tBodyAcc.mean...Y	
+mean of original data column  
+tBodyAcc.mean...Z	
+mean of original data column  
 tBodyAcc.std...X	mean of original data column  
 tBodyAcc.std...Y	mean of original data column  
 tBodyAcc.std...Z	mean of original data column  
