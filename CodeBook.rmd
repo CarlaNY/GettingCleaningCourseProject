@@ -2,7 +2,10 @@
 title: "CodeBook"
 output: word_document
 ---
-
+---
+CarlaNY 20150725   
+I opted for a wide tidy data set     
+   
 FieldName	|   Source  
 ------------------------------------------------  
 Subject	|  identifier for the Subject  
