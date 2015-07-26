@@ -1,0 +1,167 @@
+---
+title: "CodeBook"
+output: word_document
+---
+
+FieldName	|   Source
+------------------------------------------------
+Subject	|  identifier for the Subject
+ActivityID	|  Activity engaged in
+tBodyAcc.mean...X	|   mean of original data column
+tBodyAcc.mean...Y	|   mean of original data column
+tBodyAcc.mean...Z	|   mean of original data column
+tBodyAcc.std...X	|   mean of original data column
+tBodyAcc.std...Y	|   mean of original data column
+tBodyAcc.std...Z	|   mean of original data column
+tGravityAcc.mean...X	|   mean of original data column
+tGravityAcc.mean...Y	|   mean of original data column
+tGravityAcc.mean...Z	|   mean of original data column
+tGravityAcc.std...X	|   mean of original data column
+tGravityAcc.std...Y	|   mean of original data column
+tGravityAcc.std...Z	|   mean of original data column
+tBodyAccJerk.mean...X	|   mean of original data column
+tBodyAccJerk.mean...Y	|   mean of original data column
+tBodyAccJerk.mean...Z	|   mean of original data column
+tBodyAccJerk.std...X	|   mean of original data column
+tBodyAccJerk.std...Y	|   mean of original data column
+tBodyAccJerk.std...Z	|   mean of original data column
+tBodyGyro.mean...X	|   mean of original data column
+tBodyGyro.mean...Y	|   mean of original data column
+tBodyGyro.mean...Z	|   mean of original data column
+tBodyGyro.std...X	|   mean of original data column
+tBodyGyro.std...Y	|   mean of original data column
+tBodyGyro.std...Z	|   mean of original data column
+tBodyGyroJerk.mean...X	|   mean of original data column
+tBodyGyroJerk.mean...Y	|   mean of original data column
+tBodyGyroJerk.mean...Z	|   mean of original data column
+tBodyGyroJerk.std...X	|   mean of original data column
+tBodyGyroJerk.std...Y	|   mean of original data column
+tBodyGyroJerk.std...Z	|   mean of original data column
+tBodyAccMag.mean..	|   mean of original data column
+tBodyAccMag.std..	|   mean of original data column
+tGravityAccMag.mean..	|   mean of original data column
+tGravityAccMag.std..	|   mean of original data column
+tBodyAccJerkMag.mean..	|   mean of original data column
+tBodyAccJerkMag.std..	|   mean of original data column
+tBodyGyroMag.mean..	|   mean of original data column
+tBodyGyroMag.std..	|   mean of original data column
+tBodyGyroJerkMag.mean..	|   mean of original data column
+tBodyGyroJerkMag.std..	|   mean of original data column
+fBodyAcc.mean...X	|   mean of original data column
+fBodyAcc.mean...Y	|   mean of original data column
+fBodyAcc.mean...Z	|   mean of original data column
+fBodyAcc.std...X	|   mean of original data column
+fBodyAcc.std...Y	|   mean of original data column
+fBodyAcc.std...Z	|   mean of original data column
+fBodyAcc.meanFreq...X	|   mean of original data column
+fBodyAcc.meanFreq...Y	|   mean of original data column
+fBodyAcc.meanFreq...Z	|   mean of original data column
+fBodyAccJerk.mean...X	|   mean of original data column
+fBodyAccJerk.mean...Y	|   mean of original data column
+fBodyAccJerk.mean...Z	|   mean of original data column
+fBodyAccJerk.std...X	|   mean of original data column
+fBodyAccJerk.std...Y	|   mean of original data column
+fBodyAccJerk.std...Z	|   mean of original data column
+fBodyAccJerk.meanFreq...X	|   mean of original data column
+fBodyAccJerk.meanFreq...Y	|   mean of original data column
+fBodyAccJerk.meanFreq...Z	|   mean of original data column
+fBodyGyro.mean...X	|   mean of original data column
+fBodyGyro.mean...Y	|   mean of original data column
+fBodyGyro.mean...Z	|   mean of original data column
+fBodyGyro.std...X	|   mean of original data column
+fBodyGyro.std...Y	|   mean of original data column
+fBodyGyro.std...Z	|   mean of original data column
+fBodyGyro.meanFreq...X	|   mean of original data column
+fBodyGyro.meanFreq...Y	|   mean of original data column
+fBodyGyro.meanFreq...Z	|   mean of original data column
+fBodyAccMag.mean..	|   mean of original data column
+fBodyAccMag.std..	|   mean of original data column
+fBodyAccMag.meanFreq..	|   mean of original data column
+fBodyBodyAccJerkMag.mean..	|   mean of original data column
+fBodyBodyAccJerkMag.std..	|   mean of original data column
+fBodyBodyAccJerkMag.meanFreq..	|   mean of original data column
+fBodyBodyGyroMag.mean..	|   mean of original data column
+fBodyBodyGyroMag.std..	|   mean of original data column
+fBodyBodyGyroMag.meanFreq..	|   mean of original data column
+fBodyBodyGyroJerkMag.mean..	|   mean of original data column
+fBodyBodyGyroJerkMag.std..	|   mean of original data column
+fBodyBodyGyroJerkMag.meanFreq..	|   mean of original data column
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+# get the data 
+# 1.Merges the training and the test sets to create one data set.
+
+# use the features as column names
+v_dframe_features <- read.table("./UCI HAR Dataset/features.txt")
+v_features_formatted <- str_replace_all(unlist(v_dframe_features$V2),"[[:punct:]]",".")
+
+# get the training
+# ....  subjects dataset
+v_dframe_training_subjects <- read.table("./UCI HAR Dataset/train/subject_train.txt",header=FALSE,col.names=c("Subject"))
+# ....  activity training set
+v_dframe_training_activity_y <- read.table("./UCI HAR Dataset/train/y_train.txt",header=FALSE,col.names=c("ActivityID"))
+v_dframe_training_subjact <- cbind(v_dframe_training_subjects,v_dframe_training_activity_y)
+# ....  training data
+v_dframe_training_data <- read.table("./UCI HAR Dataset/train/X_train.txt",header=FALSE,col.names=v_features_formatted)
+v_dframe_training_all <- cbind(v_dframe_training_subjact,v_dframe_training_data)
+# at this point v_dframe_training has all training data
+
+# get the test data
+# .... subjects dataset
+v_dframe_test_subjects <- read.table("./UCI HAR Dataset/test/subject_test.txt",header=FALSE,col.names=c("Subject"))
+# .... activity test dataset
+v_dframe_test_activity_y <- read.table("./UCI HAR Dataset/test/y_test.txt",header=FALSE,col.names=c("ActivityID"))
+v_dframe_test_subjact <- cbind(v_dframe_test_subjects,v_dframe_test_activity_y)
+# .... test data
+v_dframe_test_data <- read.table("./UCI HAR Dataset/test/X_test.txt",header=FALSE,col.names=v_features_formatted)
+# .... combine
+v_dframe_test_all <- cbind(v_dframe_test_subjact,v_dframe_test_data)
+
+# combine into 1 monster df for all training and test data
+v_dframe_all <- rbind(v_dframe_training_all, v_dframe_test_all)
+
+# 2.Extracts only the measurements on the mean and standard deviation for each measurement. 
+# new column list of ones to extract -- 
+#  if column = 'Subject'
+#  if column = 'ActivityDesc'
+# or if name of column contains mean or std
+v_whichcolumns <- (grepl("Subject",names(v_dframe_all)) | grepl("ActivityID",names(v_dframe_all)) | grepl ("mean",names(v_dframe_all)) | grepl ("std",names(v_dframe_all)))
+## using the new list of columns, splice down the data frame to just those columns
+v_dframe_all <- v_dframe_all[,v_whichcolumns]
+## for my testing... 
+## v_hold_all <- v_dframe_all
+##
+
+# 3.Uses descriptive activity names to name the activities in the data set
+v_dframe_activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt",header=FALSE,col.names=c("ActivityID","ActivityDesc"))
+# loop through, resetting the values in the v_dframe_all
+
+for (i in 1:nrow(v_dframe_activity_labels)) {
+        v_dframe_all[v_dframe_all$ActivityID==i,2] <- as.character(v_dframe_activity_labels$ActivityDesc[i])
+}
+
+# 4.Appropriately labels the data set with descriptive variable names.
+# did this on the creation of the dfs by specifying the col.names parameter
+# ... see above
+#
+# 5.From the data set in step 4, creates a second, independent tidy data set 
+#      with the average of each variable for each activity and each subject.
+v_dframe_melt_alldata <- melt(v_dframe_all,id=c("Subject","ActivityID"),measuser.vars=(grepl("mean",names(v_dframe_all)) | grepl("std",names(v_dframe_all))))
+# summarize
+v_dframe_summarized <- dcast(v_dframe_melt_alldata,Subject + ActivityID ~ variable,mean)
+
+# output to a file
+write.table(v_dframe_summarized,"CourseProject_TidyData.txt", row.names=FALSE)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
