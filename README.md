@@ -1,1 +1,86 @@
 # GettingCleaningCourseProject
+The below are the field names and sources of the tidy data
+
+FieldName	Source
+Subject	identifier for the Subject
+ActivityID	Activity engaged in
+tBodyAcc.mean...X	mean of original data column
+tBodyAcc.mean...Y	mean of original data column
+tBodyAcc.mean...Z	mean of original data column
+tBodyAcc.std...X	mean of original data column
+tBodyAcc.std...Y	mean of original data column
+tBodyAcc.std...Z	mean of original data column
+tGravityAcc.mean...X	mean of original data column
+tGravityAcc.mean...Y	mean of original data column
+tGravityAcc.mean...Z	mean of original data column
+tGravityAcc.std...X	mean of original data column
+tGravityAcc.std...Y	mean of original data column
+tGravityAcc.std...Z	mean of original data column
+tBodyAccJerk.mean...X	mean of original data column
+tBodyAccJerk.mean...Y	mean of original data column
+tBodyAccJerk.mean...Z	mean of original data column
+tBodyAccJerk.std...X	mean of original data column
+tBodyAccJerk.std...Y	mean of original data column
+tBodyAccJerk.std...Z	mean of original data column
+tBodyGyro.mean...X	mean of original data column
+tBodyGyro.mean...Y	mean of original data column
+tBodyGyro.mean...Z	mean of original data column
+tBodyGyro.std...X	mean of original data column
+tBodyGyro.std...Y	mean of original data column
+tBodyGyro.std...Z	mean of original data column
+tBodyGyroJerk.mean...X	mean of original data column
+tBodyGyroJerk.mean...Y	mean of original data column
+tBodyGyroJerk.mean...Z	mean of original data column
+tBodyGyroJerk.std...X	mean of original data column
+tBodyGyroJerk.std...Y	mean of original data column
+tBodyGyroJerk.std...Z	mean of original data column
+tBodyAccMag.mean..	mean of original data column
+tBodyAccMag.std..	mean of original data column
+tGravityAccMag.mean..	mean of original data column
+tGravityAccMag.std..	mean of original data column
+tBodyAccJerkMag.mean..	mean of original data column
+tBodyAccJerkMag.std..	mean of original data column
+tBodyGyroMag.mean..	mean of original data column
+tBodyGyroMag.std..	mean of original data column
+tBodyGyroJerkMag.mean..	mean of original data column
+tBodyGyroJerkMag.std..	mean of original data column
+fBodyAcc.mean...X	mean of original data column
+fBodyAcc.mean...Y	mean of original data column
+fBodyAcc.mean...Z	mean of original data column
+fBodyAcc.std...X	mean of original data column
+fBodyAcc.std...Y	mean of original data column
+fBodyAcc.std...Z	mean of original data column
+fBodyAcc.meanFreq...X	mean of original data column
+fBodyAcc.meanFreq...Y	mean of original data column
+fBodyAcc.meanFreq...Z	mean of original data column
+fBodyAccJerk.mean...X	mean of original data column
+fBodyAccJerk.mean...Y	mean of original data column
+fBodyAccJerk.mean...Z	mean of original data column
+fBodyAccJerk.std...X	mean of original data column
+fBodyAccJerk.std...Y	mean of original data column
+fBodyAccJerk.std...Z	mean of original data column
+fBodyAccJerk.meanFreq...X	mean of original data column
+fBodyAccJerk.meanFreq...Y	mean of original data column
+fBodyAccJerk.meanFreq...Z	mean of original data column
+fBodyGyro.mean...X	mean of original data column
+fBodyGyro.mean...Y	mean of original data column
+fBodyGyro.mean...Z	mean of original data column
+fBodyGyro.std...X	mean of original data column
+fBodyGyro.std...Y	mean of original data column
+fBodyGyro.std...Z	mean of original data column
+fBodyGyro.meanFreq...X	mean of original data column
+fBodyGyro.meanFreq...Y	mean of original data column
+fBodyGyro.meanFreq...Z	mean of original data column
+fBodyAccMag.mean..	mean of original data column
+fBodyAccMag.std..	mean of original data column
+fBodyAccMag.meanFreq..	mean of original data column
+fBodyBodyAccJerkMag.mean..	mean of original data column
+fBodyBodyAccJerkMag.std..	mean of original data column
+fBodyBodyAccJerkMag.meanFreq..	mean of original data column
+fBodyBodyGyroMag.mean..	mean of original data column
+fBodyBodyGyroMag.std..	mean of original data column
+fBodyBodyGyroMag.meanFreq..	mean of original data column
+fBodyBodyGyroJerkMag.mean..	mean of original data column
+fBodyBodyGyroJerkMag.std..	mean of original data column
+fBodyBodyGyroJerkMag.meanFreq..	mean of original data column
+
