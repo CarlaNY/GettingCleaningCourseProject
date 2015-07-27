@@ -6,55 +6,54 @@ Carla_NY
 20150725
 =================================================================
 
-This project contains a summarized subset of data from “Human Activity Recognition Using Smartphones Dataset” provided by DITEN.   Details of the parent dataset are below.
+This project contains a summarized subset of data from “Human Activity Recognition Using Smartphones Dataset” provided by DITEN.   Details of the parent dataset are below.  
 
-My data set combines the training and testing data, using only the factors with mean or std in their names, and summarizes based upon the unique subject ID (volunteer) and the activity he/she participated in.
+My data set combines the training and testing data, using only the factors with mean or std in their names, and summarizes based upon the unique subject ID (volunteer) and the activity he/she participated in.  
 
-To perform this the following was completed:
-get the data 
- The files used were
-   features.txt: List of all features.
-   activity_labels.txt': Links the class labels with their activity name.
-   train/X_train.txt': Training set.
-   train/y_train.txt': Training labels.
-   train/subject_train.txt': volunteer IDs
-   test/X_test.txt': Test set.
-   test/y_test.txt': Test labels.
-   test/subject_test.txt': volunteer IDs
+To perform this the following was completed:  
+get the data   
+ The files used were  
+   features.txt: List of all features.  
+   activity_labels.txt': Links the class labels with their activity name.  
+   train/X_train.txt': Training set.  
+   train/y_train.txt': Training labels.  
+   train/subject_train.txt': volunteer IDs  
+   test/X_test.txt': Test set.  
+   test/y_test.txt': Test labels.  
+   test/subject_test.txt': volunteer IDs  
      
-# 1.Merges the training and the test sets to create one data set.
-
-# use the features as column names
-# get the training
-# ....  subjects dataset
-# ....  activity training set
-# ....  training data
-
-# get the test data
-# .... subjects dataset
-# .... activity test dataset
-# .... test data
-
-# .... combine all data
-
-# 2.Extracts only the measurements on the mean and standard deviation for each measurement. 
-# new column list of ones to extract -- 
-#  if column = 'Subject'
-#  if column = 'ActivityDesc'
-# or if name of column contains mean or std
-
-
-# 3.Uses descriptive activity names to name the activities in the data set
-# read in the activity_labels files 
-
-# 4.Appropriately labels the data set with descriptive variable names.
-# did this on the creation of the dfs by specifying the col.names parameter
-#
-# 5.From the data set in step 4, creates a second, independent tidy data set 
-#      with the average of each variable for each activity and each subject.
-#   performed a melt/dcast and output using write.table
-
-original information about the parent data set below
+1.Merges the training and the test sets to create one data set.  
+   
+ use the features as column names   
+ get the training  
+ ....  subjects dataset  
+ ....  activity training set  
+ ....  training data  
+    
+ get the test data  
+ .... subjects dataset  
+ .... activity test dataset  
+ .... test data  
+   
+ .... combine all data  
+   
+ 2.Extracts only the measurements on the mean and standard deviation for each measurement.   
+ new column list of ones to extract --   
+  if column = 'Subject'    
+  if column = 'ActivityDesc'   
+ or if name of column contains mean or std    
+    
+ 3.Uses descriptive activity names to name the activities in the data set   
+ read in the activity_labels files   
+  
+ 4.Appropriately labels the data set with descriptive variable names.  
+ did this on the creation of the dfs by specifying the col.names parameter  
+  
+ 5.From the data set in step 4, creates a second, independent tidy data set   
+      with the average of each variable for each activity and each subject.  
+   performed a melt/dcast and output using write.table  
+  
+original information about the parent data set below  
 
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
