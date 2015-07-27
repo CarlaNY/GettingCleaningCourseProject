@@ -8,9 +8,9 @@ Carla_NY
 
 This project contains a summarized subset of data from “Human Activity Recognition Using Smartphones Dataset” provided by DITEN.   Details of the parent dataset are below.  
 
-My data set combines the training and testing data, using only the factors with mean or std in their names, and summarizes based upon the unique subject ID (volunteer) and the activity he/she participated in.  
-
-To perform this the following was completed:  
+My data set combines the training and testing data, using only the factors with mean or std in their names, and summarizes based upon the unique subject ID (volunteer) and the activity he/she participated in.   This processing results in a wide tidy data set, with each row identified by subject and activity and containing columns with the mean of each of the fields specified in the CodeBook.rmd   
+    
+To perform this the following was completed:    
 get the data   
  The files used were  
    features.txt: List of all features.  
